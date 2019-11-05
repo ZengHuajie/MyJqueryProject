@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html, body, .wrapper {
+    height: 100%;
+}
+.wrapper {
+    position: relative;
+}
+/* 顶部 */
+.header {
+    width: 100%;
+    height: 70px;
+    background: #354457;
+}
+
+.wrapper .logo {
+    width: 200px;
+    height: 70px;
+    padding-left: 20px;
+    line-height: 70px;
+    font-size: 14px;
+    color: #faf4f4;
+}
+.wrapper .logo img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* 左侧菜单 */
+.wrapper .left-menu {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: calc(100% - 70px);
+    background: #4d5e70;
+    color: #b3bcc5;
+    
+}
+
+.wrapper .left-menu dl dt {
+    font-weight: bold;
+    padding-left: 8px;
+}
+.wrapper .left-menu dl dt, .wrapper .left-menu dl dd {
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+.wrapper .left-menu dl dd {
+    padding-left: 30px;
+    cursor: pointer;
+}
+.wrapper .left-menu dl dd:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #354457;
+}
+.wrapper .left-menu dl dd.active {
+    background: #ddd;
+    color: #354457;
+}
+
+/* 右侧内容区 */
+
+/* 学生列表 */
+.student list {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wrapper .right-content {
+    position: absolute;
+    margin-left: 200px;
+    min-width: 500px;
+    top: 70px;
+    width: calc(100% - 200px);
+    height: calc(100% - 70px);
+    background-color: #eee;
+}
+.right-content .content {
+    display: none;
+    width: 100%;
+    height: 98%;
+}
+.right-content .content.content-active {
+    display: block;
+}
+
+/*搜索区域*/
+.content .search {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+}
+.content .search label {
+    font-size: 16px;
+    color: #646987;
+    font-weight: 800;
+}
+.content .search #search-word {
+    font-size: 16px;
+    width: 200px;
+    height: 30px;
+    border: none;
+}
+.content .search #search-submit {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    outline: none;
+    display: inline-block;
+    border: none;
+    background-color: #354457;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 学生列表 */
+.wrapper .content table {
+    width: 100%;
+    text-align: center;
+}
+.content table thead {
+    background: #e3e8ee;
+    color: #646987; 
+    font-size: 14px;
+}
+.content table tbody {
+    background: #fff;
+    font-size: 14px;
+}
+tr {
+    height: 30px;
+    line-height: 30px;
+}
+table tr td .btn {
+    color: #fff;
+    padding: 3px 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+table tr td .edit {
+    background: #5cb85c;
+    margin-right: 5px;
+}
+table tr td .edit:hover {
+    color: #fff;
+    background-color: #398439;
+    border-color: #255625;
+}
+table tr td .del {
+    background: #d9534f;
+}
+table tr td .del:hover {
+    color: #fff;
+    background: #c9302c;
+}
+
+#edit-student-form {
+    width: 400px;
+}
+
+
+/* 新增学生 */
+.content.add-student {
+    margin: 50px auto;
+    width: 600px;
+    height: calc(100% - 100px);
+    /* border: 1px solid red; */
+}
+.content .add-student {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.content div {
+    margin: 10px auto;
+    /* border: 1px solid #000; */
+}
+.content form label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    /* border: 1px solid #000; */
+}
+.content form label.radio-label {
+    width: 20px;
+}
+.content form label,
+.content form input {
+    font-size: 16px;
+}
+.content form .btn{
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px
+}
+/* 校验提示语 */
+.right-content p{
+    width: 250px;
+    float: right;
+    color: #ff0800;
+    display: none;
+    /* border: 1px solid #000; */
+}
+
+
+/* 弹窗 部分*/
+.dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+}
+.dialog.show {
+    display: block;
+}
+.dialog .mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dialog .dialog-content {
+    width: 600px;
+    height: 450px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -225px;
+    padding: 10px;
+    /* border: 1px solid #000; */
+   
+}
+.dialog .dialog-content form {
+    width: 600px;
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+}
+
+
+/* 分页 */
+.my-turn-page li {
+    display: inline-block;
+    padding: 5px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+.my-turn-page li.active {
+    background: #abcdef;
+}
+
+.page-size,
+.my-turn-page{
+    display: inline-block;
+}
+

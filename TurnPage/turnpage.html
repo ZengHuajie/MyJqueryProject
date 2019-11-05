@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrapper {
+            /*width: 500px;*/
+            height: 50px;
+            margin: 50px auto;
+        }
+        .my-turn-page li {
+            display: inline-block;
+            padding: 5px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 10px;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+        .my-turn-page li.active {
+            background: #abcdef;
+        }
+
+        .page-size,
+        .my-turn-page{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper"></div>
+
+
+<script src="../jquery-3.3.1.js"></script>
+<script src="./turnpage.js"></script>
+
+<script type="text/javascript">
+    // 调用函数方法
+    $('.wrapper').page({
+        // 总的条数
+        allPageSize: 100,
+        // 每一页的条数
+        pageSize: 10,
+        nowPage: 5,
+        //改变页码的时候，
+        changePageCb: function (page) {
+            console.log('cb', page);
+        }
+    })
+
+</script>
+
+</body>
+</html>

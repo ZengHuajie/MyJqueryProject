@@ -1,0 +1,19 @@
+init函数用来初始化所有的事件
+
+bindEvent用来绑定所有的事件：
+	从左侧菜单栏的切换开始→$('').on('click', 'dd', function () {})，利用冒泡，将事件冒泡到点击	的元素上。
+	新增学生的提交按钮→要注意form表单提交后的默认刷新页面，用e.preventDefault
+	$('表单').serializeArray()表单会以数组的形式返回(name: value)
+	用函数将返回的数组处理成对象的形式→用一个空对象来接收返回的数组，如果对象里没有属性，就把数组的name当做属性，value当做属性值
+	知识点：fadeIn() fadeOut() slideUp() SlideDown()
+	添加成功后记得重置表单→$(表单).reset();
+	
+	点击编辑里的提交按钮，更新数据→
+
+
+	封装一个ajax函数，将相同的属性提取出来(type: 'get',url,data,dataType: 'json', success)
+		注意data数据拼接→$.extend(data, {appkey}
+
+
+
+	
